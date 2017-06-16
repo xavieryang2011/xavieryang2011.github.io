@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description:
-author: John Doe
-language:
-timezone:
+title: 奋斗不止
+subtitle: work.read.run
+description: make life better
+author: xavieryang
+language: zh_CN
+timezone: Asia/Beijing
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -68,6 +68,6 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:git
-  repo:https://github.com/xavieryang2011/xavieryang2011.github.io.git
-  branch:master
+  type: git
+  repo: https://github.com/xavieryang2011/xavieryang2011.github.io.git
+  branch: master
