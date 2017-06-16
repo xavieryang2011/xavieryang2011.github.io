@@ -4,4 +4,4 @@ date: 2017-06-16 10:52:19
 tags: life
 ---
 从今天开始更新博客，希望能坚持下来，分享工作，学习，生活，先在github安家吧，后续可以考虑申请个人域名，哈哈。
-fighting
+fighting,fighting!
