@@ -7,7 +7,7 @@ title: 奋斗不止
 subtitle: work.read.run
 description: make life better
 author: xavieryang
-language: zh_CN
+language: zh-Hans
 timezone: Asia/Shanghai
 
 # URL
@@ -66,8 +66,15 @@ daily: false
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: anatole
-
+theme: next
+# Social links
+social:
+  GitHub: https://github.com/xavieryang2011
+  # Twitter: https://twitter.com/your-user-name
+  Weibo: http://weibo.com/xiangchengboy
+  # douban: http://douban.com/people/your-user-name
+  # zhihu: http://www.zhihu.com/people/your-user-name
+  # 等等
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
