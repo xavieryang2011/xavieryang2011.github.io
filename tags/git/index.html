@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="工作," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -93,19 +93,15 @@
 
 
 
-<meta name="description" content="今天遇到一个问题，commit后发现一些不需要的内容也提交了，这个时候还没有push到远程服务器怎么办？当然首先想到的就是撤销这次提交，索性用git reset -hard [commitid],执行完，坏了，发现本地的修改也全部回滚了，还好本地做了备份，那应该怎么办呢？果断用git reset [commitid],完整版是git reset 9413d2b,这样只会撤销这次提交，而本地文件还是">
-<meta name="keywords" content="工作">
-<meta property="og:type" content="article">
-<meta property="og:title" content="git reset与git reset hard的区别">
-<meta property="og:url" content="http://yoursite.com/2017/06/20/work-git-reset/index.html">
+<meta name="description" content="make life better">
+<meta property="og:type" content="website">
+<meta property="og:title" content="marker">
+<meta property="og:url" content="http://yoursite.com/tags/git/index.html">
 <meta property="og:site_name" content="marker">
-<meta property="og:description" content="今天遇到一个问题，commit后发现一些不需要的内容也提交了，这个时候还没有push到远程服务器怎么办？当然首先想到的就是撤销这次提交，索性用git reset -hard [commitid],执行完，坏了，发现本地的修改也全部回滚了，还好本地做了备份，那应该怎么办呢？果断用git reset [commitid],完整版是git reset 9413d2b,这样只会撤销这次提交，而本地文件还是">
-<meta property="og:image" content="http://yoursite.com/images/git.png">
-<meta property="og:updated_time" content="2017-06-20T11:56:59.000Z">
+<meta property="og:description" content="make life better">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git reset与git reset hard的区别">
-<meta name="twitter:description" content="今天遇到一个问题，commit后发现一些不需要的内容也提交了，这个时候还没有push到远程服务器怎么办？当然首先想到的就是撤销这次提交，索性用git reset -hard [commitid],执行完，坏了，发现本地的修改也全部回滚了，还好本地做了备份，那应该怎么办呢？果断用git reset [commitid],完整版是git reset 9413d2b,这样只会撤销这次提交，而本地文件还是">
-<meta name="twitter:image" content="http://yoursite.com/images/git.png">
+<meta name="twitter:title" content="marker">
+<meta name="twitter:description" content="make life better">
 
 
 
@@ -133,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/06/20/work-git-reset/"/>
+  <link rel="canonical" href="http://yoursite.com/tags/git/"/>
 
 
 
 
 
-  <title>git reset与git reset hard的区别 | marker</title>
+  <title>标签: git | marker</title>
   
 
 
@@ -164,7 +160,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -258,154 +254,44 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/20/work-git-reset/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xavieryang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="marker">
-    </span>
+  <div id="posts" class="posts-collapse">
+    <div class="collection-title">
+      <h1>git<small>标签</small>
+      </h1>
+    </div>
 
     
-      <header class="post-header">
+      
 
-        
-        
-          <h1 class="post-title" itemprop="name headline">git reset与git reset hard的区别</h1>
-        
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2017/06/27/work-git-stash/" itemprop="url">
               
-                <span class="post-meta-item-text">发表于</span>
+                <span itemprop="name">work-git-status</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-20T17:14:48+08:00">
-                2017-06-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p>今天遇到一个问题，commit后发现一些不需要的内容也提交了，这个时候还没有push到远程服务器怎么办？当然首先想到的就是撤销这次提交，索性用git reset -hard [commitid],执行完，坏了，发现本地的修改也全部回滚了，还好本地做了备份，那应该怎么办呢？果断用git reset [commitid],完整版是git reset 9413d2b,这样只会撤销这次提交，而本地文件还是撤销回去，接下来就是看需要提交哪几个文件再提交就可以了。<br>commitid怎么找呢，git reflog命令，找到上一个commitid就可以了，和git log的区别自个一试便知。<br>最近发现git功能真是强大，各种命令确实可以提升工作效率，那么常用的有哪些呢：<br>git pull –拉取远程数据<br>git push –推送到远程服务器<br>git add  –添加要提交的文件<br>git commit -m ‘’–提交文件<br>git branch –查看本地分支<br>git branch branchname –新建分支branchname<br>git checkout branchname –切换分支到branchname<br>git reset –撤销操作<br>git clone giturl /url –复制远程giturl到本地路径url</p>
-<p>暂时就写这么多吧，回头再补充。。。。。。</p>
-<p><img src="/images/git.png" alt=""></p>
-
-      
-    </div>
-
-    <div>
-      
+            </a>
         
+      </h2>
 
-      
-    </div>
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-06-27T15:15:39+08:00"
+              content="2017-06-27" >
+          06-27
+        </time>
+      </div>
 
-    <div>
-      
-        
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/工作/" rel="tag"># 工作</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/06/18/read_wl/" rel="next" title="万历五十年读后感">
-                <i class="fa fa-chevron-left"></i> 万历五十年读后感
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/27/work-git-stash/" rel="prev" title="work-git-status">
-                work-git-status <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
+    </header>
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
+    
   </div>
+
+  
 
 
           </div>
@@ -413,10 +299,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-  </div>
-
 
         </div>
         
@@ -630,10 +512,10 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
 
-
+  
 
   
 

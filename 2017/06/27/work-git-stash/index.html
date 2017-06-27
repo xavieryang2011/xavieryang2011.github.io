@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="工作," />
+  <meta name="keywords" content="work,git," />
 
 
 
@@ -93,19 +93,17 @@
 
 
 
-<meta name="description" content="今天遇到一个问题，commit后发现一些不需要的内容也提交了，这个时候还没有push到远程服务器怎么办？当然首先想到的就是撤销这次提交，索性用git reset -hard [commitid],执行完，坏了，发现本地的修改也全部回滚了，还好本地做了备份，那应该怎么办呢？果断用git reset [commitid],完整版是git reset 9413d2b,这样只会撤销这次提交，而本地文件还是">
-<meta name="keywords" content="工作">
+<meta name="description" content="今天项目中用到了git status,相信大家也会经常遇到类似的问题：当在一个分支上做开发时，突然QA抛出一个线上的问题，这时就需要翻出线上分支的代码，可是目前开发的分支又还没有达到提交的状态，怎么办？这个时候就用到了status,说白了就是一个临时存储仓库。能过git stash命令将所有变更暂存起来。去另一分支修改代码，好，这时候新的问题出现了，如果真是线上bug，又不能在线上分支做提交，这个">
+<meta name="keywords" content="work,git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git reset与git reset hard的区别">
-<meta property="og:url" content="http://yoursite.com/2017/06/20/work-git-reset/index.html">
+<meta property="og:title" content="work-git-status">
+<meta property="og:url" content="http://yoursite.com/2017/06/27/work-git-stash/index.html">
 <meta property="og:site_name" content="marker">
-<meta property="og:description" content="今天遇到一个问题，commit后发现一些不需要的内容也提交了，这个时候还没有push到远程服务器怎么办？当然首先想到的就是撤销这次提交，索性用git reset -hard [commitid],执行完，坏了，发现本地的修改也全部回滚了，还好本地做了备份，那应该怎么办呢？果断用git reset [commitid],完整版是git reset 9413d2b,这样只会撤销这次提交，而本地文件还是">
-<meta property="og:image" content="http://yoursite.com/images/git.png">
-<meta property="og:updated_time" content="2017-06-20T11:56:59.000Z">
+<meta property="og:description" content="今天项目中用到了git status,相信大家也会经常遇到类似的问题：当在一个分支上做开发时，突然QA抛出一个线上的问题，这时就需要翻出线上分支的代码，可是目前开发的分支又还没有达到提交的状态，怎么办？这个时候就用到了status,说白了就是一个临时存储仓库。能过git stash命令将所有变更暂存起来。去另一分支修改代码，好，这时候新的问题出现了，如果真是线上bug，又不能在线上分支做提交，这个">
+<meta property="og:updated_time" content="2017-06-27T07:42:51.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git reset与git reset hard的区别">
-<meta name="twitter:description" content="今天遇到一个问题，commit后发现一些不需要的内容也提交了，这个时候还没有push到远程服务器怎么办？当然首先想到的就是撤销这次提交，索性用git reset -hard [commitid],执行完，坏了，发现本地的修改也全部回滚了，还好本地做了备份，那应该怎么办呢？果断用git reset [commitid],完整版是git reset 9413d2b,这样只会撤销这次提交，而本地文件还是">
-<meta name="twitter:image" content="http://yoursite.com/images/git.png">
+<meta name="twitter:title" content="work-git-status">
+<meta name="twitter:description" content="今天项目中用到了git status,相信大家也会经常遇到类似的问题：当在一个分支上做开发时，突然QA抛出一个线上的问题，这时就需要翻出线上分支的代码，可是目前开发的分支又还没有达到提交的状态，怎么办？这个时候就用到了status,说白了就是一个临时存储仓库。能过git stash命令将所有变更暂存起来。去另一分支修改代码，好，这时候新的问题出现了，如果真是线上bug，又不能在线上分支做提交，这个">
 
 
 
@@ -133,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/06/20/work-git-reset/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/06/27/work-git-stash/"/>
 
 
 
 
 
-  <title>git reset与git reset hard的区别 | marker</title>
+  <title>work-git-status | marker</title>
   
 
 
@@ -268,7 +266,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/20/work-git-reset/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/27/work-git-stash/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="xavieryang">
@@ -285,7 +283,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">git reset与git reset hard的区别</h1>
+          <h1 class="post-title" itemprop="name headline">work-git-status</h1>
         
 
         <div class="post-meta">
@@ -297,8 +295,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-20T17:14:48+08:00">
-                2017-06-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-27T15:15:39+08:00">
+                2017-06-27
               </time>
             
 
@@ -332,9 +330,9 @@
       
 
       
-        <p>今天遇到一个问题，commit后发现一些不需要的内容也提交了，这个时候还没有push到远程服务器怎么办？当然首先想到的就是撤销这次提交，索性用git reset -hard [commitid],执行完，坏了，发现本地的修改也全部回滚了，还好本地做了备份，那应该怎么办呢？果断用git reset [commitid],完整版是git reset 9413d2b,这样只会撤销这次提交，而本地文件还是撤销回去，接下来就是看需要提交哪几个文件再提交就可以了。<br>commitid怎么找呢，git reflog命令，找到上一个commitid就可以了，和git log的区别自个一试便知。<br>最近发现git功能真是强大，各种命令确实可以提升工作效率，那么常用的有哪些呢：<br>git pull –拉取远程数据<br>git push –推送到远程服务器<br>git add  –添加要提交的文件<br>git commit -m ‘’–提交文件<br>git branch –查看本地分支<br>git branch branchname –新建分支branchname<br>git checkout branchname –切换分支到branchname<br>git reset –撤销操作<br>git clone giturl /url –复制远程giturl到本地路径url</p>
-<p>暂时就写这么多吧，回头再补充。。。。。。</p>
-<p><img src="/images/git.png" alt=""></p>
+        <p>今天项目中用到了git status,相信大家也会经常遇到类似的问题：当在一个分支上做开发时，突然QA抛出一个线上的问题，这时就需要翻出线上分支的代码，可是目前开发的分支又还没有达到提交的状态，怎么办？这个时候就用到了status,说白了就是一个临时存储仓库。能过git stash命令将所有变更暂存起来。<br>去另一分支修改代码，好，这时候新的问题出现了，如果真是线上bug，又不能在线上分支做提交，这个是时候还得将线上分支的修改代码同步到开发分支master,继续用git status,这个时候就需要注意了，暂存是不区分是那个分支的，也就是说你在A分支下暂存的代码在B分支也是可用的。到这一步，把线上分支的代码也暂存好了，那就切换分支到master开发分支吧，然后就要是怎么恢复暂存的代码了。git stash apply命令默认恢复最近的一个暂存，通过git stash list可能查看所有的暂存列表：</p>
+<p>stash@{0}: WIP on 1500: 0fc3c93 1、新增渠道<br>stash@{1}: WIP on master: 3ecc801 更新版本号等<br>stash@{2}: On master: Uncommitted changes before Update at 17/5/19 18:58<br>stash@{3}: WIP on 1300: 0d4813e 创建1300分支<br>stash@{4}: On master: Uncommitted changes before Update at 17/5/4 21:07<br>stash@{5}: On master: Uncommitted changes before Update at 17/5/3 16:27<br>stash@{6}: On master: Uncommitted changes before Update at 17/3/2 12:18<br>stash@{7}: On master: Uncommitted changes before Update at 17/2/28 12:03</p>
+<p>如果想恢复指定暂存，可以用命令git stash apply stash@{1}<br>好了，相信知道这些个基本用法，可以支撑上一段时日了，哈哈。高级用法还请各位自个研究吧。</p>
 
       
     </div>
@@ -364,7 +362,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/工作/" rel="tag"># 工作</a>
+            <a href="/tags/work/" rel="tag"># work</a>
+          
+            <a href="/tags/git/" rel="tag"># git</a>
           
         </div>
       
@@ -377,8 +377,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/18/read_wl/" rel="next" title="万历五十年读后感">
-                <i class="fa fa-chevron-left"></i> 万历五十年读后感
+              <a href="/2017/06/20/work-git-reset/" rel="next" title="git reset与git reset hard的区别">
+                <i class="fa fa-chevron-left"></i> git reset与git reset hard的区别
               </a>
             
           </div>
@@ -386,10 +386,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/27/work-git-stash/" rel="prev" title="work-git-status">
-                work-git-status <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
