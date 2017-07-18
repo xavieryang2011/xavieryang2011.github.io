@@ -1,6 +1,6 @@
 ---
-title: 在线生成Api mock数据
-date: 2017-07-17 20:59:07
-tags:API
+title: api在线mock数据
+date: 2017-07-18 12:19:06
+tags: API
 ---
 [easy-mock](https://www.easy-mock.com/)
