@@ -1,8 +1,7 @@
 ---
-layout: android_
 title: android动画分类
 date: 2017-08-02 10:49:11
-tags:[android,animation]
+tags: [android,animation]
 ---
 ### 一、补间动画（TweenAnimation),不会改变view的实际属性。
    #### 1.位移动画(TranslateAnimation)
